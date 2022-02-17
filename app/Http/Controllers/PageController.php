@@ -9,8 +9,7 @@ class PageController extends Controller
 {
     protected function index()
     {
-        $movies = Movie::all();
-        dd($movies);
-        return view('home');
+        $db_movies = Movie::all();
+        return view('home', compact('db_movies'));
     }
 }
